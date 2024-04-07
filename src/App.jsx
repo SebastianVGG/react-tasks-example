@@ -22,7 +22,7 @@ function App() {
   }
 
   function deleteTask(taskId) {
-    let newArrayTasks = tasks.filter((task) => task.id !== taskId)
+    let newArrayTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newArrayTasks);
   }
 
