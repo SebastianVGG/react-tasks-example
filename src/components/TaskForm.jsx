@@ -10,6 +10,8 @@ function TaskForm({ createTask }) {
       title,
       description
     });
+    setTitle('')
+    setDescripcion('')
   };
   return (
     <div>
@@ -19,12 +21,15 @@ function TaskForm({ createTask }) {
           onChange={(e) => {
             setTitle(e.target.value);
           }}
+          value={title}
+          autoFocus
         />
         <textarea
           placeholder="Escribe la descripcion de la tarea"
           onChange={(e) => {
             setDescripcion(e.target.value);
           }}
+          value={description}
         ></textarea>
         <button>Guardar</button>
       </form>

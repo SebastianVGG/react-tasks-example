@@ -1,8 +1,6 @@
-import TaskCard from './TaskCard'
+import TaskCard from "./TaskCard";
 
-function TaskList({tasks}) {
-
-
+function TaskList({ tasks, deleteTask }) {
   if (tasks.length === 0) {
     return <h1>Aún no hay tareas.</h1>;
   }
@@ -10,9 +8,7 @@ function TaskList({tasks}) {
   return (
     <div>
       {tasks.map((task) => {
-        return (
-          <TaskCard key={task.id} task={task}/>
-        );
+        return <TaskCard key={task.id} task={task} deleteTask={deleteTask}/>;
       })}
     </div>
   );
