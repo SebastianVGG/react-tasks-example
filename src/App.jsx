@@ -1,7 +1,8 @@
+import TaskList from './TaskList'
+
+
 function App() {
-return (
-    <div>App</div>
-  )
+return <TaskList/>
 }
 
 export default App
