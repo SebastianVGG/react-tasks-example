@@ -8,11 +8,11 @@ function TaskList() {
 const {tasks} = useContext(TaskContext)
 
   if (tasks.length === 0) {
-    return <h1>Aún no hay tareas.</h1>;
+    return <h1 className="text-white text-xl font-bold text-center m-10">Aún no hay tareas.</h1>;
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-10">
       {tasks.map((task) => {
         //Se crea TaskCard por cada objeto del arreglo y se le pasan valores únicos para que cree un TaskCard por cada objeto
         return <TaskCard key={task.id} task={task} />;
